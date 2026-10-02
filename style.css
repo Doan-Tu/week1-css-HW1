@@ -1,0 +1,92 @@
+/* Bước 3: Tạo kiểu cho thẻ body (Họ phông chữ và kích thước phông chữ) */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #1a1a1a; /* Độ tương phản cao vượt qua kiểm tra WAVE */
+}
+
+/* Bước 4: Tạo kiểu cho thẻ header (Màu nền) */
+header {
+    background-color: #1a365d; /* Màu xanh lá/xanh đậm tự nhiên */
+    color: #ffffff;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Bước 8: Tạo kiểu cho thẻ h1 (Căn chỉnh văn bản, họ phông chữ và thuộc tính màu sắc) */
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #ffffff; /* Trắng sáng tương phản tuyệt đối trên nền xanh đậm #1a365d */
+    margin-top: 15px;
+}
+
+/* Bước 5: Tạo kiểu cho thẻ nav (Màu nền) */
+nav {
+    background-color: #2b6cb0;
+    padding: 10px 0;
+}
+
+/* Định dạng danh sách nav */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Bước 7: Tạo kiểu cho thẻ li (Thuộc tính hiển thị và chiều rộng) */
+li {
+    display: inline-block;
+    width: 30%; /* Giúp 3 mục menu dàn hàng ngang đều nhau */
+    text-align: center;
+}
+
+/* Định kiểu thêm cho thẻ a trong nav để đảm bảo độ tương phản WAVE */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+}
+
+/* Bước 6: Tạo kiểu cho thẻ main (Màu nền và kích thước phông chữ) */
+main {
+    background-color: #ffffff;
+    font-size: 18px;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+/* Bước 9: Tạo kiểu cho thẻ p (Chiều cao dòng) */
+p {
+    line-height: 1.6;
+    color: #2d3748;
+}
+
+/* Định kiểu cho liên kết trong phần văn bản */
+main a {
+    color: #1a365d;
+    text-decoration: underline;
+}
+
+/* Bước 6 (Bổ sung): Tạo kiểu cho thẻ footer (Màu nền) */
+footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #90cdf4;
+}
