@@ -1,48 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Thuộc tính chung cho toàn bộ trang */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 150%;
+  background-color: #fdfbe8; /* Màu nền kem nhạt theo hình mẫu */
+  margin: 0;
+  padding: 0;
+}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Springtime In Michigan</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+/* Định kiểu cho liên kết Skip to Main Content */
+a[href="#main"] {
+  display: block;
+  padding: 5px;
+}
 
-<body>
-  <!-- Bước 1: Thêm liên kết Skip to Main Content -->
-  <a href="#main">Skip to Main Content</a>
+/* Định kiểu Header */
+header {
+  background-color: #d3d3d3; /* Nền xám nhạt */
+  padding: 15px;
+}
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="neighborhood.html">Neighborhood Walks</a></li>
-        <li><a href="parks.html">Walks in the Park</a></li>
-      </ul>
-    </nav>
-    <img src="images/BaconGallupPark.jpg" alt="Brown Labradoodle sitting next to a statue.">
-    <h1>Springtime in Michigan</h1>
-  </header>
+/* -------------------------------------------------------------
+ * Bước 2: Nhận xét (comment out) kiểu dáng cũ cho phần tử li
+ * ------------------------------------------------------------- */
+/* 
+li {
+  display: inline;
+} 
+*/
 
-  <!-- Bước 1: Thêm id="main" vào thẻ main -->
-  <main id="main">
-    <p>Springtime in <a href="https://www.michigan.org/city/ann-arbor">Ann Arbor</a> is a beautiful time. Even though
-      it can be chilly at times, it is nice to walk my dog Bacon. This site includes some pictures I have taken on
-      these walks. </p>
+/* -------------------------------------------------------------
+ * Bước 3: Thay đổi phần tử nav để sử dụng khối nội tuyến (inline-block)
+ * và có chiều rộng khoảng 80%
+ * ------------------------------------------------------------- */
+nav {
+  display: inline-block;
+  width: 80%;
+}
 
-    <p>Sometimes we walk around the neighborhood, other times we make it to the woods. Ann Arbor also has some
-      beautiful lakes and rivers including the <a
-        href="https://www.annarbor.org/things-to-do/recreation-outdoors/huron-river/">Huron River Watertrail</a> and
-      the <a href="https://www.a2gov.org/departments/Parks-Recreation/parks-places/argo/pages/default.aspx">Argo Park
-        Cascades</a>.</p>
-  </main>
+/* Các liên kết trong nav */
+nav ul {
+  list-style-type: square;
+}
 
-  <footer>
-    <p>This page was originally created by Colleen van Lent for the <a
-        href="https://www.coursera.org/specializations/web-design"> Web Design for Everybody</a> Specialization.
-      Students are invited to make changes.</p>
-  </footer>
+nav a {
+  color: #4b0082;
+  font-weight: bold;
+}
 
-</body>
+/* -------------------------------------------------------------
+ * Bước 4: Sử dụng bộ chọn hậu duệ để chỉ tạo kiểu cho hình ảnh 
+ * trong điều hướng (nav img) có chiều rộng khoảng 10%
+ * và thêm position: relative; top: 20px;
+ * ------------------------------------------------------------- */
+nav img, header > img {
+  width: 10%;
+  position: relative;
+  top: 20px;
+}
 
-</html>
+/* Kiểu dáng cho tiêu đề h1 */
+h1 {
+  text-align: center;
+  color: #00008b;
+  font-style: italic;
+  font-size: 2.2rem;
+  margin-top: 10px;
+}
+
+/* Đoạn văn bản trong trang Home (chỉ áp dụng cho thẻ p trực tiếp trong main) */
+main > p {
+  background-color: #ffff00; /* Nền vàng tươi theo ảnh mẫu 1 */
+  padding: 15px;
+  margin: 20px;
+  line-height: 1.5;
+}
+
+/* -------------------------------------------------------------
+ * Bước 5 & 7: Tạo kiểu cho lớp .grid sử dụng lưới 2 cột (~40% mỗi cột)
+ * Căn chỉnh các thuộc tính justify-content, align-items, row-gap
+ * ------------------------------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 20px;
+  background-color: #ffff00; /* Nền vàng phủ kín toàn bộ lưới theo ảnh mẫu 2 */
+  padding: 20px 10px;
+  margin: 20px;
+}
+
+/* -------------------------------------------------------------
+ * Bước 6: Sử dụng bộ chọn hậu duệ chỉ tạo kiểu cho các hình ảnh 
+ * trong lớp .grid (.grid img) có chiều rộng 100%
+ * ------------------------------------------------------------- */
+.grid img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+}
+
+/* -------------------------------------------------------------
+ * Bước 8: Tạo kiểu cho lớp .flex sử dụng flexbox
+ * Điều chỉnh các thuộc tính flex-wrap và justify-content
+ * ------------------------------------------------------------- */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ffff00; /* Nền vàng phủ kín flexbox theo ảnh mẫu 3 */
+  padding: 20px 10px;
+  margin: 20px;
+}
+
+/* Sử dụng bộ chọn hậu duệ (.flex img) để đảm bảo không bị đè CSS từ .grid */
+.flex img {
+  width: 18%; /* 5 ảnh trên 1 hàng tương ứng với thiết kế ở ảnh minh họa 3 */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: #d3d3d3;
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 0.9rem;
+}
